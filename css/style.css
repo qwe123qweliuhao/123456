@@ -1,0 +1,20 @@
+#header{
+	width: 250px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#tit-5,#tit-4,#tit-3,#tit-2,#tit-1{
+	margin: 10px 0;
+}
+.box{
+	position:fixed;
+	top: 30%;
+	left:42%;
+	display: none;
+	background: #fff;
+	padding: 50px 30px;
+	box-shadow: 9px 10px 41px -0.5px black;
+}
+#tit-3 select{
+	width: 168px;
+}

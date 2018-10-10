@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>腾讯后台</title>
+    <link rel="shortcut icon" href="//mat1.gtimg.com/www/icon/favicon2.ico"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div id="app">
+	
+	<div id="header"><h1>后台效果页面</h1></div>
+	
+	<button type="button" class="btn btn-success" v-on:click="btn" style="display: block;margin: 30px auto;width: 300px;">添加</button>
+	
+	<table class="table">
+	  	<thead class="thead-dark">
+	    	<tr>
+		      	<th scope="col">序号</th>
+		      	<th scope="col">标题</th>
+		      	<th scope="col">作者</th>
+		      	<th scope="col">标签</th>
+		      	<th scope="col">时间</th>
+		      	<th scope="col">按钮</th>
+	    	</tr>
+	  	</thead>
+	</table>
+	
+    <attr v-for="(arr,index) in arrs" :todo='arr' :mo="index"></attr>
+    
+    <div class="box">
+		<div id="tit-1">
+	    	标题：<input type="text" v-model="tit"/>
+	    </div>
+	    <div id="tit-2">
+	    	作者：<input type="text" v-model="nam"/>
+	    	</div>
+		<div id="tit-3">
+	    	标签：<select v-model="val">
+			  	<option value ="新闻">新闻</option>
+			  	<option value ="军事">军事</option>
+			  	<option value="教育">教育</option>
+			  	<option value="娱乐">娱乐</option>
+			  	<option value="游戏">游戏</option>
+			  	<option value="美食">美食</option>
+			</select>
+	    	</div>
+		<div id="tit-4">
+	    	内容：<input type="text" v-model="cont"/>
+		</div>
+		<div id="tit-5">
+			<button type="button" class="btn btn-primary" v-on:click="but">创建</button>
+			<button type="button" class="btn btn-primary" v-on:click="ton">取消</button>
+		</div>
+	</div>
+</div>
+
+<script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.22.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/locale/zh-cn.js"></script>
+<script src="../js/script.js"></script>
+
+</body>
+</html>
